@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./pages/main.css">
+    <title>Frontend Mentor | Pricing Component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Our Pricing</h1>
+        <div class="duration-toggle">
+          <p>Annually</p>
+          <div><a href="#" class="toggle"></a></div>
+          <p>Monthly</p>
+        </div>
+        <div class="subscription-cards">
+          <div class="basic">
+            <h4 class="title">Basic</h4>
+            <h2 class="monthly">&dollar;<span>19.99</span></h2>
+            <h2 class="annually">&dollar;<span>199.99</span></h2>
+            <ul>
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="professional">
+            <h4 class="title">Professional</h4>
+            <h2 class="monthly">&dollar;<span>24.99</span></h2>
+            <h2 class="annually">&dollar;<span>249.99</span></h2>
+            <ul>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="master">
+            <h4 class="title">Master</h4>
+            <h2 class="monthly">&dollar;<span>39.99</span></h2>
+            <h2 class="annually">&dollar;<span>399.99</span></h2>
+            <ul>
+              <li>2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20 GB</li>
+            </ul>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/yusuff-fatorisa/pricing" target="_blank">Yusuff Fatorisa</a>.
+      </div>
+    </div>
+    <script>
+      const togglerSwitch = document.querySelector(".card .duration-toggle > div");
+      const toggler = document.querySelector(".toggle");
+      const monthly = document.querySelectorAll(".monthly");
+      const yearly = document.querySelectorAll(".annually");
+      toggler.addEventListener("click", () => {
+        togglerSwitch.classList.toggle("justify");
+        monthly.forEach(month => month.classList.toggle("hide"));
+        yearly.forEach(year => year.classList.toggle("show"));
+      })
+    </script>
+  </body>
+</html>
+    
