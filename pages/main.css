@@ -43,6 +43,7 @@ body {
 	flex-direction: column;
 	width: 100%;
 	gap: 30px;
+	padding-block: 30px;
 }
 
 /*Card Styling*/
