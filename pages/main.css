@@ -277,6 +277,10 @@ body {
 	.card .subscription-cards > div {
 		width: 95% !important;
 	}
+
+	.basic, .master {
+		border: 1px solid var(--Dark-Grayish-Blue);
+	}
 	.attribution {
 		font-size: 9px;
 	}
